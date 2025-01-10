@@ -23,16 +23,27 @@ header {
 }
 
 button {
+    font-size: 16px;
+    font-weight: bold;
     background-color: var(--primary-color);
     padding: 12px 40px;
+    border: 2px solid var(--primary-color);
     border-radius: 8px;
     color: white;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: transparent;
 }
 
 .navigation {
     list-style-type: none;
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    padding-left: 0;
 }
 
 .navigation li a {
@@ -41,9 +52,14 @@ button {
     text-decoration: none;
 }
 
+.navigation li a:hover {    
+    opacity: 1;
+    text-decoration: underline white; 
+}
+
 .navigation .active {
     opacity: 1;
-    text-decoration: underline var(--primary-color);
+    text-decoration: underline var(--primary-color); 
 }
 
 .hero {
@@ -62,13 +78,24 @@ button {
     max-width: 464px;
 }
 
+.hero-img img {
+    border-radius: 40px;
+}
+
 .hero-text {
     width: 50%;    
 }
 
 .hero-link {
+    background-color: transparent;
+    margin-left:  20px;
+    border: 2px solid transparent;
+}
+
+.hero-link a {
     color: white;
     text-decoration: none;
+    margin-left: 10px;
 }
 
 .hero-heading,
@@ -80,8 +107,129 @@ button {
     font-size: 64px;
 }
 
+.hero-buttons {
+    margin-bottom: 40px;
+}
+
 .colored {
     color: var(--primary-color);
+}
+
+.achivements {
+    display: flex;
+    gap: 94px;
+}
+
+.achivement {
+    padding-right: 20px;
+    border-right: 1px solid var(--primary-color);
+}
+
+.achivement:last-child {
+    padding-right: 20px;
+    border-right: none;
+}
+
+.achivement h2 {
+    font-size: 48px;
+    margin-top: 0;
+}
+
+/* gallery */
+
+.gallery {
+    padding: 0 20px 92px 20px;
+}
+
+.gallery h2 {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.gallery-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 64px;
+}
+
+.gallery-items {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #131E3A;
+    box-shadow: 0 -4px 4px 0 var(--primary-color);
+}
+
+.card-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.gallery-time-heading {
+    font-size: 14px;
+    color: #838382;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cart-time-ending {
+    display: flex;
+    gap: 5.5px;
+}
+
+.price {
+    display: flex;
+}
+
+.amount {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-text h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.cart-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* create-and-sall */
+
+
+.createNFT {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.createNFT-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.createNFT h2 {
+    font-size: 48px;
+}
+
+.createNFT-buttons {
+    margin-top: 40px;
 }
 
 @media screen and (max-width: 900px) {
@@ -95,5 +243,15 @@ button {
     }
     header {
         flex-direction: column;
+    }
+    .gallery-wrapper {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .gallery-items {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
     }
   }
